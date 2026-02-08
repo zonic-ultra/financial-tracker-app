@@ -1,5 +1,6 @@
 "use client";
 import { LogOut, Moon, Settings, Sun, User } from "lucide-react";
+import Link from "next/link";
 import { Avatar, AvatarBadge, AvatarFallback, AvatarImage } from "./avatar";
 import { Button } from "@/src/components/ui/button";
 import {

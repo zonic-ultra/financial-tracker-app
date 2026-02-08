@@ -1,6 +1,8 @@
 // app/dashboard/layout.tsx
 
 import AppSidebar from "@/src/components/ui/AppSidebar";
+import Navbar from "@/src/components/ui/Navbar";
+import { SidebarTrigger } from "@/src/components/ui/sidebar";
 
 export default function DashboardLayout({
   children,
@@ -18,6 +20,7 @@ export default function DashboardLayout({
       {/* Main content */}
       <main className="flex-1 overflow-auto bg-background">
         {/* <SidebarTrigger /> */}
+        <Navbar />
         {children}
       </main>
     </div>
