@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.2 26">
+  <defs>
+    <linearGradient id="a" x1="40.7" y1="28.32" x2="44" y2="28.32" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#231f20" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#309ad6" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="b" x1="29.66" y1="28.16" x2="38.72" y2="28.16" xlink:href="#a"/>
+    <linearGradient id="c" x1="34.86" y1="38.07" x2="39.34" y2="38.07" xlink:href="#a"/>
+    <linearGradient id="d" x1="44" y1="21.5" x2="49" y2="21.5" xlink:href="#a"/>
+    <linearGradient id="e" x1="21.82" y1="33.66" x2="45.26" y2="33.66" xlink:href="#a"/>
+    <linearGradient id="f" x1="42.68" y1="22.76" x2="47.18" y2="22.76" xlink:href="#a"/>
+    <linearGradient id="g" x1="45.09" y1="23.01" x2="45.41" y2="23.01" xlink:href="#a"/>
+    <linearGradient id="h" x1="44.45" y1="22" x2="44.74" y2="22" xlink:href="#a"/>
+  </defs>
+  <path d="M40.7,29.9h3.1c.1,0,.2-.1.2-.3V26.8Z" transform="translate(-21.8 -19)" fill="url(#a)"/>
+  <path d="M32.2,26.1a2.6,2.6,0,0,0-2.5,2.6v1.1h4.4c.2,0,.3.1.3.2h0l4.3-4.1Z" transform="translate(-21.8 -19)" fill="url(#b)"/>
+  <path d="M34.9,44.8a.2.2,0,0,0,.2.2,4.2,4.2,0,0,0,4.2-4.3V31.1l-4.4,4.2Z" transform="translate(-21.8 -19)" fill="url(#c)"/>
+  <path d="M44,19l1.1,1.1a2.5,2.5,0,0,1,2.4,2.5V23l.3-.2L49,24V19Z" transform="translate(-21.8 -19)" fill="url(#d)"/>
+  <path d="M42.5,23,31.3,33.5H26.5c-.1,0-.1,0-.1-.1v-1a3,3,0,0,1,2.8-3v-1A2.8,2.8,0,0,1,32,25.7H28.1A6.3,6.3,0,0,0,21.8,32V44.3a4.4,4.4,0,0,0,4.6-4.4V37.1a.1.1,0,0,1,.1-.1h5.1a2.2,2.2,0,0,0,1.6-.6L45.3,25.1H45A2.5,2.5,0,0,1,42.5,23Z" transform="translate(-21.8 -19)" fill="url(#e)"/>
+  <path d="M44.9,20.5a2.2,2.2,0,0,0-2.2,2.3A2.2,2.2,0,0,0,44.9,25a2.3,2.3,0,1,0,0-4.5Zm.8,2.8-.3.2h-.3v.5h-.4v-.5l-.4-.2a.6.6,0,0,1-.2-.5h.3c0,.1.1.2.2.3a.1.1,0,0,1,.1.1v-.7h-.3a.2.2,0,0,1-.2-.2.4.4,0,0,1-.1-.3c0-.1,0-.1.1-.2a.3.3,0,0,1,.1-.2h.4v-.3h.4v.3h.2l.3.2c0,.1.1.2.1.3h-.3l-.2-.3h-.1v.5l.4.2c.1,0,.1.1.2.2a.4.4,0,0,1,.1.3C45.8,23.1,45.7,23.2,45.7,23.3Z" transform="translate(-21.8 -19)" fill="url(#f)"/>
+  <path d="M45.1,22.7v.6h.2c.1,0,.1-.1.1-.2s0-.2-.1-.2Z" transform="translate(-21.8 -19)" fill="url(#g)"/>
+  <path d="M44.5,22h.2v-.5a.1.1,0,0,1-.1.1C44.5,21.9,44.5,21.9,44.5,22Z" transform="translate(-21.8 -19)" fill="url(#h)"/>
+</svg>
