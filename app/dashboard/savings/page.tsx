@@ -6,7 +6,7 @@ import { PiggyBank, TrendingUp } from "lucide-react"; // or Savings icon
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import api from "@/app/api/axios";
 
-export function Savings() {
+export default function Savings() {
   const [total, setTotal] = useState<number>(0);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

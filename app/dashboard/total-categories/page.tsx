@@ -6,7 +6,7 @@ import { Tags, TrendingUp } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import api from "@/app/api/axios";
 
-export function Categories() {
+export default function Categories() {
   const [total, setTotal] = useState<number>(0);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
