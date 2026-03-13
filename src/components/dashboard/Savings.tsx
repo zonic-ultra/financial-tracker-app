@@ -3,13 +3,8 @@
 import { useEffect, useState } from "react";
 import { PiggyBank, TrendingUp } from "lucide-react"; // or Savings icon
 
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/src/components/ui/card";
-import api from "@/src/api/axios";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import api from "@/api/axios";
 
 export default function Savings() {
   const [total, setTotal] = useState<number>(0);

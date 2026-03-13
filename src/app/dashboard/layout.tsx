@@ -1,8 +1,7 @@
 // app/dashboard/layout.tsx
 
-import AppSidebar from "@/src/components/ui/AppSidebar";
-import Navbar from "@/src/components/ui/Navbar";
-import { SidebarTrigger } from "@/src/components/ui/sidebar";
+import AppSidebar from "@/components/ui/AppSidebar";
+import Navbar from "@/components/ui/Navbar";
 
 export default function DashboardLayout({
   children,

@@ -1,9 +1,9 @@
 // app/dashboard/page.tsx
 
-import IncomeVsExpenses from "./income-vs-expenses/page";
-import Savings from "./savings/page";
-import Categories from "./total-categories/page";
-import Transactions from "./total-transactions/income-vs-expenses/page";
+import IncomeVsExpenses from "@/components/dashboard/IncomeVsExpenses";
+import Savings from "@/components/dashboard/Savings";
+import Categories from "@/components/dashboard/Categories";
+import Transactions from "@/components/dashboard/Transactions";
 
 export default function DashboardOverview() {
   return (

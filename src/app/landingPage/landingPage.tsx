@@ -17,13 +17,13 @@ import Image from "next/image";
 // AppView type (optional)
 type AppView = "landing" | "about" | "features" | "dashboard" | "login";
 import { useTheme } from "next-themes";
-import { Button } from "@/src/components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/src/components/ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu";
 
 // Props – all optional with defaults
 interface LandingProps {

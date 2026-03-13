@@ -1,43 +1,43 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Tags, TrendingUp } from "lucide-react";
+import { ListChecks, TrendingUp } from "lucide-react";
 
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/src/components/ui/card";
-import api from "@/src/api/axios";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import api from "@/api/axios";
 
-export default function Categories() {
+export default function Transactions() {
   const [total, setTotal] = useState<number>(0);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchCategories = async () => {
+    const loadTotal = async () => {
       try {
-        const res = await api.get("/categories");
+        const response = await api.get("/transactions/total");
 
-        console.log("Raw categories response:", res.data); // ← helpful for debugging
+        const value = Number(
+          typeof response.data === "number"
+            ? response.data
+            : (response.data?.total ??
+                response.data?.count ??
+                response.data?.transactions ??
+                response.data?.value ??
+                response.data?.data ??
+                0),
+        );
 
-        const categories = Array.isArray(res.data)
-          ? res.data
-          : res.data?.content || res.data?.categories || res.data?.data || [];
-
-        setTotal(categories.length);
+        setTotal(value);
         setError(null);
       } catch (err: any) {
-        console.error("Failed to load categories:", err);
-        setError("Could not load categories");
+        console.error("Failed to load total transactions:", err);
+        setError("Could not load transactions");
       } finally {
         setIsLoading(false);
       }
     };
 
-    fetchCategories();
+    loadTotal();
   }, []);
 
   if (isLoading) {
@@ -45,12 +45,13 @@ export default function Categories() {
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium">
-            Total Categories
+            Total Transactions
           </CardTitle>
+          {/* <div className="mt-1 size-6 rounded-full bg-emerald-600/10 flex items-center justify-center flex-shrink-0">
+            <ListChecks className="h-6 w-6 text-muted-foreground" />
+          </div> */}
+          {/* <ListChecks className="h-4 w-4 text-muted-foreground" /> */}
         </CardHeader>
-        {/* <div className="mt-1 size-6 rounded-full bg-emerald-600/10 flex items-center justify-center flex-shrink-0">
-          <Tags className="h-6 w-6 text-muted-foreground" />
-        </div> */}
         <CardContent>
           <div className="text-2xl font-bold animate-pulse">...</div>
           <p className="text-xs text-muted-foreground">Loading...</p>
@@ -64,10 +65,10 @@ export default function Categories() {
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium">
-            Total Categories
+            Total Transactions
           </CardTitle>
-          <div className="mt-1 size-9 rounded-full bg-pink-600/10 flex items-center justify-center flex-shrink-0">
-            <Tags className="h-6 w-6 text-muted-foreground" />
+          <div className="mt-1 size-9 rounded-full bg-emerald-600/10 flex items-center justify-center flex-shrink-0">
+            <ListChecks className="h-6 w-6 text-muted-foreground" />
           </div>
         </CardHeader>
         <CardContent>
@@ -81,9 +82,11 @@ export default function Categories() {
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-        <CardTitle className="text-sm font-medium">Total Categories</CardTitle>
-        <div className="mt-1 size-9 rounded-full bg-pink-600/10 flex items-center justify-center flex-shrink-0">
-          <Tags className="h-6 w-6 text-muted-foreground" />
+        <CardTitle className="text-sm font-medium">
+          Total Transactions
+        </CardTitle>
+        <div className="mt-1 size-9 rounded-full bg-emerald-600/10 flex items-center justify-center flex-shrink-0">
+          <ListChecks className="h-6 w-6 text-muted-foreground" />
         </div>
       </CardHeader>
       <CardContent>
@@ -92,10 +95,10 @@ export default function Categories() {
           {total > 0 ? (
             <>
               <TrendingUp className="h-3.5 w-3.5 text-green-500" />
-              <span className="text-green-600 font-medium">Defined</span>
+              <span className="text-green-600 font-medium">Active</span>
             </>
           ) : (
-            <span className="text-muted-foreground">No categories yet</span>
+            <span className="text-muted-foreground">No transactions yet</span>
           )}
           <span className="text-muted-foreground ml-1">• All time</span>
         </div>

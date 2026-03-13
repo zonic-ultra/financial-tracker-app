@@ -25,8 +25,8 @@ import Image from "next/image";
 const items = [
   { title: "Home", url: "/", icon: Home }, // ← Public landing page
   { title: "Overview", url: "/dashboard", icon: ChartSpline },
-  { title: "Transactions", url: "/dashboard/transactions", icon: BadgeCent },
-  { title: "Categories", url: "/dashboard/categories", icon: Grid2x2Plus },
+  { title: "Transactions", url: "/transactions", icon: BadgeCent },
+  { title: "Categories", url: "/categories", icon: Grid2x2Plus },
 ];
 
 const adminItems = [

@@ -2,7 +2,7 @@
 import { LogOut, Moon, Settings, Sun, User } from "lucide-react";
 import Link from "next/link";
 import { Avatar, AvatarBadge, AvatarFallback, AvatarImage } from "./avatar";
-import { Button } from "@/src/components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,7 +11,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/src/components/ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu";
 import { useTheme } from "next-themes";
 import { SidebarTrigger } from "./sidebar";
 
