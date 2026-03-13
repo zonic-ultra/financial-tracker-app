@@ -34,7 +34,7 @@ interface LandingProps {
 
 export default function Landing({
   onGetStarted = () => {
-    window.location.href = "/dashboard";
+    window.location.href = "/sb/dashboard";
   },
   initialSection = "home",
   onViewChange,

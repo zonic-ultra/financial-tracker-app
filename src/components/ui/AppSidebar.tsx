@@ -25,14 +25,14 @@ import Image from "next/image";
 const items = [
   { title: "Home", url: "/", icon: Home }, // ← Public landing page
   { title: "Overview", url: "/dashboard", icon: ChartSpline },
-  { title: "Transactions", url: "/transactions", icon: BadgeCent },
-  { title: "Categories", url: "/categories", icon: Grid2x2Plus },
+  { title: "Transactions", url: "/sb/transactions", icon: BadgeCent },
+  { title: "Categories", url: "/sb/categories", icon: Grid2x2Plus },
 ];
 
 const adminItems = [
-  { title: "Dashboard", url: "/admin", icon: LayoutDashboard },
-  { title: "Users", url: "/admin/users", icon: Users },
-  { title: "Settings", url: "/admin/settings", icon: Settings },
+  { title: "Dashboard", url: "/sb/admin", icon: LayoutDashboard },
+  { title: "Users", url: "/sb/admin/users", icon: Users },
+  { title: "Settings", url: "/sb/admin/settings", icon: Settings },
 ];
 export default function AppSidebar() {
   return (
